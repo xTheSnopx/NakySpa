@@ -3,101 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naky Spa </title>
+    <title>Naky Spa - Baños y Cortes para Mascotas</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- Fondo animado -->
+<div class="fondo-animado">
+    <span>🐾</span>
+    <span>🐶</span>
+    <span>🐱</span>
+    <span>✨</span>
+    <span>🛁</span>
+</div>
+
 <header>
-    <h1>Baños y Cortes Naky Spa Caninos y Felinos 🐱🐶</h1>
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#precios">Precios</a>
-        <a href="#galeria">Galería</a>
-    </nav>
+    <div class="header-contenido">
+        <div class="logo">
+            <span class="logo-icon">🐾</span>
+            <span class="logo-texto">Naky Spa</span>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#precios">Precios</a>
+            <a href="#galeria">Galería</a>
+            <a href="#carrito" class="nav-cta">Reservar</a>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
 </header>
 
-<section id="inicio">
-    <h2>🐾 Bienvenidos a Naky Spa 🐾</h2>
+<!-- HERO SECTION -->
+<section id="inicio" class="hero">
+    <div class="hero-contenido">
+        <span class="hero-badge">🏆 #1 en cuidado de mascotas</span>
+        <h1 class="hero-titulo">Baños y Cortes <br><span class="texto-destacado">Naky Spa</span></h1>
+        <p class="hero-subtitulo">Cuidado premium para caninos y felinos 🐱🐶</p>
+        <p class="hero-descripcion">
+            En nuestro espacio, cada mascota es tratada como parte de la familia. 
+            Nos apasiona brindar una experiencia única donde el bienestar, la higiene 
+            y la estética se combinan para resaltar lo mejor de tu compañero peludo.
+        </p>
+        <div class="hero-botones">
+            <a href="#carrito" class="btn-primario">📅 Agendar Cita</a>
+            <a href="#servicios" class="btn-secundario">Ver Servicios</a>
+        </div>
+    </div>
+    <div class="hero-imagenes">
+        <div class="imagen-principal">
+            <img src="imagenes/perro5.jpeg" alt="Mascota feliz en Naky Spa">
+        </div>
+        <div class="imagenes-secundarias">
+            <img src="imagenes/perro2.jpeg" alt="Mascota feliz">
+            <img src="imagenes/perro3.jpeg" alt="Mascota feliz">
+            <img src="imagenes/perro4.jpeg" alt="Mascota feliz">
+        </div>
+    </div>
+</section>
 
-    <p>
-        En nuestro espacio, cada mascota es tratada como parte de la familia. 
-        Nos apasiona brindar una experiencia única, donde el bienestar, la higiene 
-        y la estética se combinan para resaltar lo mejor de tu compañero peludo.
-    </p>
-
-    <p>
-        Ofrecemos baños especializados, cortes profesionales y cuidado integral, 
-        utilizando productos de alta calidad y técnicas seguras que garantizan 
-        comodidad y tranquilidad en cada visita.
-    </p>
-
-    <p>
-        Aquí no solo embellecemos, también cuidamos, protegemos y consentimos. 
-        Porque sabemos que tu mascota merece lo mejor, trabajamos con dedicación, 
-        paciencia y cariño en cada detalle.
-    </p>
-
-    <p class="frase-final">
-        ✨ Confía en nosotros para mantener a tu mejor amigo limpio, feliz y saludable. ✨
-    </p>
-
-    <img src="imagenes/perro5.jpeg" alt="Mascota feliz">
-    <img src="imagenes/perro2.jpeg" alt="Mascota feliz">
-    <img src="imagenes/perro3.jpeg" alt="Mascota feliz">
-    <img src="imagenes/perro4.jpeg" alt="Mascota feliz">
+<!-- CARACTERÍSTICAS -->
+<section class="caracteristicas">
+    <div class="caracteristica">
+        <div class="caracteristica-icono">🏠</div>
+        <h3>Ambiente Seguro</h3>
+        <p>Espacios diseñados para el confort de tu mascota</p>
+    </div>
+    <div class="caracteristica">
+        <div class="caracteristica-icono">💖</div>
+        <h3>Trato Cariñoso</h3>
+        <p>Profesionales con amor por los animales</p>
+    </div>
+    <div class="caracteristica">
+        <div class="caracteristica-icono">✨</div>
+        <h3>Productos Premium</h3>
+        <p>Solo usamos productos de alta calidad</p>
+    </div>
+    <div class="caracteristica">
+        <div class="caracteristica-icono">⏰</div>
+        <h3>Horarios Flexibles</h3>
+        <p>Nos adaptamos a tu agenda</p>
+    </div>
 </section>
 <section id="servicios">
-    <h2>Nuestros Servicios</h2>
+    <div class="seccion-header">
+        <span class="seccion-badge">Lo que hacemos</span>
+        <h2>Nuestros Servicios</h2>
+        <p class="seccion-descripcion">Cuidado integral para tu mascota con los mejores productos y profesionales</p>
+    </div>
 
     <div class="contenedor-servicios">
 
-        <div class="servicio">
-            <div class="icono">💊</div>
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">💊</div>
             <h3>Desparasitación</h3>
-            <p>Tratamiento interno y externo para proteger a tu mascota.</p>
+            <p>Tratamiento interno y externo para proteger a tu mascota de parásitos.</p>
+            <span class="servicio-link">Más info →</span>
         </div>
 
-        <div class="servicio">
-            <div class="icono">✂️</div>
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">✂️</div>
             <h3>Corte de Uñas</h3>
-            <p>Corte seguro y profesional para mayor comodidad.</p>
+            <p>Corte seguro y profesional para mayor comodidad y salud.</p>
+            <span class="servicio-link">Más info →</span>
         </div>
 
-        <div class="servicio">
-            <div class="icono">🛁</div>
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">🛁</div>
             <h3>Baño Medicado</h3>
             <p>Ideal para pieles sensibles o con tratamiento dermatológico.</p>
+            <span class="servicio-link">Más info →</span>
         </div>
 
-        <div class="servicio">
-            <div class="icono">🐜</div>
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">🐜</div>
             <h3>Baño Insecticida</h3>
             <p>Eliminación de pulgas y garrapatas con productos seguros.</p>
+            <span class="servicio-link">Más info →</span>
         </div>
 
-        <div class="servicio">
-            <div class="icono">🌸</div>
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">🌸</div>
             <h3>Baño Desodorante</h3>
             <p>Limpieza profunda con aroma fresco y duradero.</p>
+            <span class="servicio-link">Más info →</span>
+        </div>
+
+        <div class="servicio" data-aos="fade-up">
+            <div class="servicio-icono">✨</div>
+            <h3>Corte Estético</h3>
+            <p>Estilizado profesional según la raza de tu mascota.</p>
+            <span class="servicio-link">Más info →</span>
         </div>
 
     </div>
 </section>
 
 <section id="precios">
-    <h2>Nuestros Precios</h2>
+    <div class="seccion-header">
+        <span class="seccion-badge">Planes y paquetes</span>
+        <h2>Nuestros Precios</h2>
+        <p class="seccion-descripcion">Elige el paquete ideal para tu mascota</p>
+    </div>
 
     <div class="contenedor-precios">
 
         <div class="card">
-            <h3>Baño Básico</h3>
+            <div class="card-header">
+                <span class="card-emoji">🚿</span>
+                <h3>Baño Básico</h3>
+            </div>
             <p class="precio">$30.000</p>
+            <p class="precio-texto">por sesión</p>
             <ul>
-                <li>Baño desodorante</li>
-                <li>Corte de uñas</li>
-                <li>Limpieza de oídos</li>
+                <li>✓ Baño desodorante</li>
+                <li>✓ Corte de uñas</li>
+                <li>✓ Limpieza de oídos</li>
+                <li>✓ Secado profesional</li>
             </ul>
             <button onclick="agregarCarrito('Baño Básico', 30000)" class="btn-carrito">
                 Agregar al carrito
@@ -105,12 +170,19 @@
         </div>
 
         <div class="card destacado">
-            <h3>Baño + Corte</h3>
+            <span class="card-popular">⭐ Más popular</span>
+            <div class="card-header">
+                <span class="card-emoji">✂️</span>
+                <h3>Baño + Corte</h3>
+            </div>
             <p class="precio">$50.000</p>
+            <p class="precio-texto">por sesión</p>
             <ul>
-                <li>Baño premium</li>
-                <li>Corte profesional</li>
-                <li>Perfume especial</li>
+                <li>✓ Baño premium</li>
+                <li>✓ Corte profesional</li>
+                <li>✓ Perfume especial</li>
+                <li>✓ Limpieza completa</li>
+                <li>✓ Lazo o pañoleta</li>
             </ul>
             <button onclick="agregarCarrito('Baño y Corte', 50000)" class="btn-carrito">
                 Agregar al carrito
@@ -118,12 +190,17 @@
         </div>
 
         <div class="card">
-            <h3>Baño Medicado</h3>
+            <div class="card-header">
+                <span class="card-emoji">💊</span>
+                <h3>Baño Medicado</h3>
+            </div>
             <p class="precio">$60.000</p>
+            <p class="precio-texto">por sesión</p>
             <ul>
-                <li>Tratamiento especial</li>
-                <li>Shampoo medicado</li>
-                <li>Revisión de piel</li>
+                <li>✓ Tratamiento especial</li>
+                <li>✓ Shampoo medicado</li>
+                <li>✓ Revisión de piel</li>
+                <li>✓ Consulta dermatológica</li>
             </ul>
             <button onclick="agregarCarrito('Baño Medicado', 60000)" class="btn-carrito">
                 Agregar al carrito
@@ -134,87 +211,250 @@
 </section>
 
 <section id="carrito">
-    <h2>🛒 Agenda tu cita</h2>
-    <div class="datos-cliente">
-    <input type="text" id="nombreCliente" placeholder="Tu nombre" required>
-    <input type="tel" id="telefonoCliente" placeholder="Tu teléfono" required>
-    <input type="text" id="fechaCliente" placeholder="Fecha" 
-       onfocus="this.type='date'" 
-       onblur="if(!this.value)this.type='text'" required>
-
-<input type="text" id="horaCliente" placeholder="Hora" 
-       onfocus="this.type='time'" 
-       onblur="if(!this.value)this.type='text'" required>
-<select id="tipoMascota" onchange="actualizarTamano()" required>
-    <option value="">Selecciona tu mascota</option>
-    <option value="Perro">Perro 🐶</option>
-    <option value="Gato">Gato 🐱</option>
-</select>
-<input type="text" id="raza" placeholder="🐾 Raza (Ej: Poodle, Criollo, Siamés)">
-<select id="tamano">
-    <option value="">🐶 Tamaño de la mascota</option>
-    <option value="Pequeño">Pequeño</option>
-    <option value="Mediano">Mediano</option>
-    <option value="Grande">Grande</option>
-</select>
-
-<select id="nervioso">
-    <option value="">🐱 ¿Es nervioso?</option>
-    <option value="Sí">Sí</option>
-    <option value="No">No</option>
-</select>
-
-<select id="primeraVisita">
-    <option value="">📅 ¿Es primera visita?</option>
-    <option value="Sí">Sí</option>
-    <option value="No">No</option>
-</select>       
-</div>
-    <ul id="lista-carrito"></ul>
-    <h3>Total: $<span id="total">0</span></h3>
-    <button onclick="enviarWhatsApp()" class="btn">
-        Enviar pedido por WhatsApp
-    </button>
+    <div class="seccion-header">
+        <span class="seccion-badge">Reservaciones</span>
+        <h2>🛒 Agenda tu cita</h2>
+        <p class="seccion-descripcion">Completa tus datos y selecciona los servicios</p>
+    </div>
+    
+    <div class="carrito-contenedor">
+        <div class="formulario-reserva">
+            <h3 class="formulario-titulo">📋 Datos de la cita</h3>
+            
+            <div class="form-grupo">
+                <label for="nombreCliente">👤 Tu nombre</label>
+                <input type="text" id="nombreCliente" placeholder="Ej: María García" required>
+            </div>
+            
+            <div class="form-grupo">
+                <label for="telefonoCliente">📱 Teléfono</label>
+                <input type="tel" id="telefonoCliente" placeholder="Ej: 320 123 4567" required>
+            </div>
+            
+            <div class="form-fila">
+                <div class="form-grupo">
+                    <label for="fechaCliente">📅 Fecha</label>
+                    <input type="date" id="fechaCliente" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="horaCliente">🕐 Hora</label>
+                    <input type="time" id="horaCliente" required>
+                </div>
+            </div>
+            
+            <h3 class="formulario-titulo">🐾 Datos de tu mascota</h3>
+            
+            <div class="form-grupo">
+                <label for="tipoMascota">Tipo de mascota</label>
+                <select id="tipoMascota" onchange="actualizarTamano()" required>
+                    <option value="">Selecciona tu mascota</option>
+                    <option value="Perro">Perro 🐶</option>
+                    <option value="Gato">Gato 🐱</option>
+                </select>
+            </div>
+            
+            <div class="form-grupo">
+                <label for="raza">Raza</label>
+                <input type="text" id="raza" placeholder="Ej: Poodle, Criollo, Siamés">
+            </div>
+            
+            <div class="form-fila">
+                <div class="form-grupo">
+                    <label for="tamano">Tamaño</label>
+                    <select id="tamano">
+                        <option value="">Seleccionar</option>
+                        <option value="Pequeño">Pequeño</option>
+                        <option value="Mediano">Mediano</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label for="nervioso">¿Es nervioso?</label>
+                    <select id="nervioso">
+                        <option value="">Seleccionar</option>
+                        <option value="Sí">Sí</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-grupo">
+                <label for="primeraVisita">¿Primera visita?</label>
+                <select id="primeraVisita">
+                    <option value="">Seleccionar</option>
+                    <option value="Sí">Sí - ¡Bienvenido!</option>
+                    <option value="No">No - Cliente frecuente</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="resumen-carrito">
+            <h3 class="formulario-titulo">🛒 Tu selección</h3>
+            <ul id="lista-carrito">
+                <li class="carrito-vacio">Agrega servicios desde la sección de precios</li>
+            </ul>
+            <div class="carrito-total">
+                <span>Total:</span>
+                <span class="total-monto">$<span id="total">0</span></span>
+            </div>
+            <button onclick="enviarWhatsApp()" class="btn-whatsapp">
+                <span class="whatsapp-icon">📱</span>
+                Enviar pedido por WhatsApp
+            </button>
+        </div>
+    </div>
 </section>
 
 <section id="galeria">
-    <h2>Galería</h2>
-    <img src="imagenes/bano1.jpeg" alt="Bano mascota">
-    <img src="imagenes/corte1.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte2.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte4.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte5.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte6.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte7.jpeg" alt="Corte mascota">
-    <img src="imagenes/corte9.jpeg" alt="Corte mascota">
+    <div class="seccion-header">
+        <span class="seccion-badge">Nuestro trabajo</span>
+        <h2>Galería</h2>
+        <p class="seccion-descripcion">Mira el antes y después de nuestros clientes peludos</p>
+    </div>
+    <div class="galeria-grid">
+        <div class="galeria-item">
+            <img src="imagenes/bano1.jpeg" alt="Baño de mascota">
+            <div class="galeria-overlay">
+                <span>🛁 Baño Spa</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte1.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte2.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte4.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte5.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte6.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte7.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+        <div class="galeria-item">
+            <img src="imagenes/corte9.jpeg" alt="Corte de mascota">
+            <div class="galeria-overlay">
+                <span>✂️ Corte Estético</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+    <h2>¿Listo para consentir a tu mascota?</h2>
+    <p>Agenda tu cita hoy y dale a tu mejor amigo el cuidado que merece</p>
+    <a href="#carrito" class="btn-primario btn-grande">📅 Agendar Ahora</a>
 </section>
 
 <footer>
-    <p>© 2026 Baños para Mascotas</p>
+    <div class="footer-contenido">
+        <div class="footer-info">
+            <div class="footer-logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-texto">Naky Spa</span>
+            </div>
+            <p>Cuidado premium para caninos y felinos</p>
+        </div>
+        <div class="footer-contacto">
+            <h4>Contacto</h4>
+            <p>📱 320 464 4455</p>
+            <p>📍 Neiva, Colombia</p>
+        </div>
+        <div class="footer-horario">
+            <h4>Horario</h4>
+            <p>Lunes - Sábado</p>
+            <p>8:00 AM - 6:00 PM</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Naky Spa - Todos los derechos reservados</p>
+    </div>
 </footer>
 <script>
 
 let carrito = [];
 let total = 0;
 
+// Toggle menu móvil
+function toggleMenu() {
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('active');
+}
+
+// Scroll suave y header sticky
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
 function agregarCarrito(servicio, precio) {
     carrito.push({servicio, precio});
     total += precio;
     actualizarCarrito();
+    
+    // Mostrar notificación
+    mostrarNotificacion(`✓ ${servicio} agregado al carrito`);
+}
+
+function mostrarNotificacion(mensaje) {
+    const notif = document.createElement('div');
+    notif.className = 'notificacion';
+    notif.textContent = mensaje;
+    document.body.appendChild(notif);
+    
+    setTimeout(() => notif.classList.add('visible'), 100);
+    setTimeout(() => {
+        notif.classList.remove('visible');
+        setTimeout(() => notif.remove(), 300);
+    }, 2500);
 }
 
 function actualizarCarrito() {
     const lista = document.getElementById("lista-carrito");
     lista.innerHTML = "";
 
-    carrito.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `
-            ${item.servicio} - $${item.precio.toLocaleString("es-CO")}
-            <button onclick="eliminarItem(${index})">❌</button>
-        `;
-        lista.appendChild(li);
-    });
+    if (carrito.length === 0) {
+        lista.innerHTML = '<li class="carrito-vacio">Agrega servicios desde la sección de precios</li>';
+    } else {
+        carrito.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.className = 'carrito-item';
+            li.innerHTML = `
+                <span class="item-nombre">${item.servicio}</span>
+                <span class="item-precio">$${item.precio.toLocaleString("es-CO")}</span>
+                <button class="btn-eliminar" onclick="eliminarItem(${index})">✕</button>
+            `;
+            lista.appendChild(li);
+        });
+    }
 
     document.getElementById("total").innerText = total.toLocaleString("es-CO");
 }
